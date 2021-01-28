@@ -1,0 +1,58 @@
+@import '../../colors.scss';
+
+.key-board-container {
+  margin: auto;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &::after {
+    content: "";
+    flex: auto;
+  }
+
+  .key-section {
+    background-color: $gray;
+    color: $white;
+    width: 60px;
+    height: 60px;
+    border: 3px solid $lightgray;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+
+    &:disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .key-board-container {
+    margin: auto;
+    max-width: 320px;
+  
+    .key-section {
+      width: 35px;
+      height: 35px;
+      border: 3px solid $lightgray;
+      font-size: 18px;
+  
+      &:disabled {
+        opacity: 0.2;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

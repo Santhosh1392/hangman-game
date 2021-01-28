@@ -1,0 +1,73 @@
+@import './colors.scss';
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+
+  .ReactModal__Content.ReactModal__Content--after-open {
+    padding: 0 !important;
+    border-radius: 15px !important;
+    .game-over-popup-section,
+    .winner-popup-section {
+      width: 500px;
+      background-color: $gray;
+      padding: 30px 15px;
+      text-align: center;
+      border-radius: 15px;
+
+      h4 {
+        font-size: 36px;
+        color: $red-shade;
+        font-weight: 600;
+        margin: 15px 0;
+      }
+
+      p {
+        color: $white;
+        margin: 10px 0;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      button {
+        background-color: $white;
+        width: 125px;
+        height: 45px;
+        border-radius: 5px;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Nunito', sans-serif;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+
+    .winner-popup-section {
+      h4 {
+        color: $green;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    .ReactModal__Content.ReactModal__Content--after-open {
+      padding: 0 !important;
+      border-radius: 15px !important;
+      .game-over-popup-section,
+      .winner-popup-section {
+        width: 320px;
+
+        h4 {
+          font-size: 24px;
+        }
+  
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
